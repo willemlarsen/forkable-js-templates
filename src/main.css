@@ -11,17 +11,18 @@ h1 {
     margin-left: 20px;
 }
 
-.images li {
+#image-list li {
     list-style: none;
     height: 200px;
     width: 100px;
     margin-right: 10px;
 }
 
-.images li img {
+#image-list li img {
     width: 100px
 }
 
-.images {
+#image-list {
     display: flex;
+    flex-wrap: wrap;
 }
