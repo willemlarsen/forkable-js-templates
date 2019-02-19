@@ -29,6 +29,27 @@ test('handles simple whitespace normalization', function(assert) {
     `);
 });
 
+// // un-comment to see failed test
+// test('fails when not equal', function(assert) {
+//     function makeTemplate() {
+//         const html = `
+//             <p>
+//                 hello
+//                 <span>bad</span>
+//             </p>
+//         `;
+//         return htmlToDOM(html);
+//     }
+
+//     const result = makeTemplate();
+//     assert.htmlEqual(result, `
+//         <p>
+//             hello 
+//             <span>good</span>
+//         </p>
+//     `);
+// });
+
 test('multiple top-level elements in fragment is error', function(assert) {
     function makeTemplate() {
         const html = `

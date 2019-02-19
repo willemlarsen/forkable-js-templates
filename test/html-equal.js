@@ -14,7 +14,15 @@ QUnit.assert.htmlEqual = function(fragment, expected) {
     const childHTML = fragment.firstElementChild.outerHTML;
     const normalizedActual = normalize(childHTML);
     const normalizedExpected = normalize(expected);
-    QUnit.assert.equal(normalizedActual, normalizedExpected);
+    const result = normalizedActual === normalizedExpected;
+    const message = result ? 'okay' : 'HTML was not the same.';
+
+    this.pushResult({
+        result,
+        actual: normalizedActual,
+        expected: normalizedExpected,
+        message
+    });
 };
 
 export default TemplateError;
