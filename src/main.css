@@ -2,6 +2,10 @@ body {
     font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 header {
     display: flex;
     align-items: center;
@@ -11,18 +15,28 @@ h1 {
     margin-left: 20px;
 }
 
-#image-list li {
-    list-style: none;
-    height: 200px;
-    width: 100px;
-    margin-right: 10px;
-}
-
-#image-list li img {
-    width: 100px
-}
 
 #image-list {
     display: flex;
     flex-wrap: wrap;
+}
+
+#image-list li {
+    list-style: none;
+    position: relative;
+    height: 200px;
+    width: 100px;
+    padding: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    border: 1px solid #aaa;
+}
+
+#image-list h2 {
+    font-size: .9em;
+}
+
+#image-list img {
+    width: 99%;
 }
