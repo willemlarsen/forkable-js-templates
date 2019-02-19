@@ -1,6 +1,6 @@
 function makeImageTemplate(image) {
     // make html string from template literal
-    const html = `
+    const html = /*html*/`
         <li>
             <h2>${image.title}</h2>
             <img src="${image.url}">
