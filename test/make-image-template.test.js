@@ -6,7 +6,8 @@ QUnit.module('make image template');
 test('produces designed html', function(assert) {
     const dom = makeImageTemplate({
         title: 'UniWhal',
-        url: 'http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg'
+        url: 'http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg',
+        horns: 1
     });
 
     assert.htmlEqual(dom, `
