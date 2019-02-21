@@ -21,15 +21,19 @@ test('call function that generates html template literal', function(assert) {
 });
 
 test('what do template literals do?', function(assert) {
-    let text, interpolations;
+    let resultText, interpolatedStuff;
+
     function wat(strings, ...values) {
-        text = strings;
-        interpolations = values;
+        console.log(strings);
+        console.log(values);
+        resultText = strings;
+        interpolatedStuff = values;
     }
 
     const num = 3;
+
     wat`one${num}two`;
 
-    assert.deepEqual(text, ['one', 'two']);
-    assert.deepEqual(interpolations, [3]);
+    assert.deepEqual(resultText, ['one', 'two']);
+    assert.deepEqual(interpolatedStuff, [3]);
 });
