@@ -24,8 +24,6 @@ test('what do template literals do?', function(assert) {
     let resultText, interpolatedStuff;
 
     function wat(strings, ...values) {
-        console.log(strings);
-        console.log(values);
         resultText = strings;
         interpolatedStuff = values;
     }
